@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C106545C1E970F180073D508 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C106545B1E970F180073D508 /* ProfileViewController.swift */; };
 		C1806EF51E94831000318719 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1806EF41E94831000318719 /* AppDelegate.swift */; };
-		C1806EF71E94831000318719 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1806EF61E94831000318719 /* ViewController.swift */; };
+		C1806EF71E94831000318719 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1806EF61E94831000318719 /* CardsViewController.swift */; };
 		C1806EFA1E94831000318719 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1806EF81E94831000318719 /* Main.storyboard */; };
 		C1806EFC1E94831000318719 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1806EFB1E94831000318719 /* Assets.xcassets */; };
 		C1806EFF1E94831000318719 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1806EFD1E94831000318719 /* LaunchScreen.storyboard */; };
@@ -34,9 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C106545B1E970F180073D508 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C1806EF11E94831000318719 /* tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1806EF41E94831000318719 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C1806EF61E94831000318719 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C1806EF61E94831000318719 /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		C1806EF91E94831000318719 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C1806EFB1E94831000318719 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1806EFE1E94831000318719 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,7 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				C1806EF41E94831000318719 /* AppDelegate.swift */,
-				C1806EF61E94831000318719 /* ViewController.swift */,
+				C1806EF61E94831000318719 /* CardsViewController.swift */,
+				C106545B1E970F180073D508 /* ProfileViewController.swift */,
 				C1806EF81E94831000318719 /* Main.storyboard */,
 				C1806EFB1E94831000318719 /* Assets.xcassets */,
 				C1806EFD1E94831000318719 /* LaunchScreen.storyboard */,
@@ -259,7 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1806EF71E94831000318719 /* ViewController.swift in Sources */,
+				C106545C1E970F180073D508 /* ProfileViewController.swift in Sources */,
+				C1806EF71E94831000318719 /* CardsViewController.swift in Sources */,
 				C1806EF51E94831000318719 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +509,7 @@
 				C1806F1B1E94831100318719 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C1806F1C1E94831100318719 /* Build configuration list for PBXNativeTarget "tinderTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +518,7 @@
 				C1806F1E1E94831100318719 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C1806F1F1E94831100318719 /* Build configuration list for PBXNativeTarget "tinderUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +527,7 @@
 				C1806F211E94831100318719 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

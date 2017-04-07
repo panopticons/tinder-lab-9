@@ -1,14 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Cards View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CardsViewController" customModule="tinder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +22,113 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navBar" translatesAutoresizingMaskIntoConstraints="NO" id="RT3-75-iA4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RT3-75-iA4" secondAttribute="height" multiplier="75:14" id="vKy-Do-ahU"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="actionButtons" translatesAutoresizingMaskIntoConstraints="NO" id="Fql-QG-cvO">
+                                <rect key="frame" x="0.0" y="539" width="375" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Fql-QG-cvO" secondAttribute="height" multiplier="375:128" id="tMA-Y1-bfg"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ryan" translatesAutoresizingMaskIntoConstraints="NO" id="i1s-wk-T2h">
+                                <rect key="frame" x="32" y="78" width="310" height="365"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzo-QG-q1G">
+                                <rect key="frame" x="167" y="564" width="41" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="07W-0o-fbx"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Fql-QG-cvO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QcG-TM-ZMM"/>
+                            <constraint firstAttribute="trailing" secondItem="Fql-QG-cvO" secondAttribute="trailing" id="Vs2-23-6Nu"/>
+                            <constraint firstItem="Fql-QG-cvO" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="k3l-mz-VYt"/>
+                            <constraint firstItem="Fql-QG-cvO" firstAttribute="trailing" secondItem="RT3-75-iA4" secondAttribute="trailing" id="sYO-9B-8Gb"/>
+                            <constraint firstItem="RT3-75-iA4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wSk-gz-I9N"/>
+                            <constraint firstItem="Fql-QG-cvO" firstAttribute="leading" secondItem="RT3-75-iA4" secondAttribute="leading" id="zBv-8x-EwN"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Ky3-JY-efu" appends="YES" id="dHR-I9-Q4M"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="picture" destination="i1s-wk-T2h" id="6gW-s9-obx"/>
+                        <segue destination="WrQ-eR-JCj" kind="presentation" identifier="toProfile" id="Yin-WT-qaY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Ky3-JY-efu">
+                    <connections>
+                        <action selector="drag:" destination="BYZ-38-t0r" id="abc-P5-FFP"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="34.632683658170919"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="paQ-hq-ftc">
+            <objects>
+                <viewController id="WrQ-eR-JCj" customClass="ProfileViewController" customModule="tinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QfZ-rO-MKG"/>
+                        <viewControllerLayoutGuide type="bottom" id="CoT-RC-SrP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mZm-7d-Yey">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navBar2" translatesAutoresizingMaskIntoConstraints="NO" id="pLd-IN-VOy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pLd-IN-VOy" secondAttribute="height" multiplier="75:14" id="jwZ-t3-jFV"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SYs-Ph-igo">
+                                <rect key="frame" x="32" y="78" width="310" height="365"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1G-8c-fpn">
+                                <rect key="frame" x="0.0" y="28" width="72" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="leave:" destination="WrQ-eR-JCj" eventType="touchUpInside" id="Du7-Cf-svS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SYs-Ph-igo" firstAttribute="top" secondItem="pLd-IN-VOy" secondAttribute="bottom" constant="8" symbolic="YES" id="8vN-7H-jCX"/>
+                            <constraint firstItem="SYs-Ph-igo" firstAttribute="leading" secondItem="mZm-7d-Yey" secondAttribute="leadingMargin" constant="16" id="Frq-Eg-W6a"/>
+                            <constraint firstItem="pLd-IN-VOy" firstAttribute="top" secondItem="mZm-7d-Yey" secondAttribute="top" id="Iet-fj-8j5"/>
+                            <constraint firstItem="pLd-IN-VOy" firstAttribute="centerX" secondItem="SYs-Ph-igo" secondAttribute="centerX" id="Tkl-9m-9E4"/>
+                            <constraint firstAttribute="trailing" secondItem="pLd-IN-VOy" secondAttribute="trailing" id="Y3I-E9-Sof"/>
+                            <constraint firstItem="CoT-RC-SrP" firstAttribute="top" secondItem="SYs-Ph-igo" secondAttribute="bottom" constant="224" id="hWH-di-Y2X"/>
+                            <constraint firstItem="pLd-IN-VOy" firstAttribute="leading" secondItem="mZm-7d-Yey" secondAttribute="leading" id="xbE-gt-PaM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="profilePic" destination="SYs-Ph-igo" id="OmQ-a2-OrC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UjO-0o-iHX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789.60000000000002" y="34.632683658170919"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="actionButtons" width="320" height="108"/>
+        <image name="navBar" width="320" height="65"/>
+        <image name="navBar2" width="320" height="65"/>
+        <image name="ryan" width="224" height="257"/>
+    </resources>
 </document>
